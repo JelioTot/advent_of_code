@@ -55,16 +55,18 @@ int main()
                 NumFinder(pairs, symbol_locations, nums, j);
             }
 
-            if (nums[0] <= nums[2] & nums[1] >= nums[3]){
+            if (nums[0] >= nums[2] & nums[0] <= nums[3]) {
                 totalScore++;
-            } else if (nums[2] <= nums[0] & nums[3] >= nums[1]){
+            } else if (nums[1] >= nums[2] & nums[1] <= nums[3]) {
+                totalScore++;
+            } else if (nums[2] >= nums[0] & nums[2] <= nums[1]) {
+                totalScore++;
+            } else if (nums[3] >= nums[0] & nums[3] <= nums[1]) {
                 totalScore++;
             } 
+            //pairs[i];
         }
         myFile.close();
     }
     std::cout << totalScore << std::endl;
 }
-
-
-
